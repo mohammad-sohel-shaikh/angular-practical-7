@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-content>
+        <h2>Add Comment</h2>   
+        <p>{{post?.title|titlecase}}</p>
+        <p>{{post?.body}}</p>
+          <mat-form-field >
+            <mat-label>Textarea</mat-label>
+            <textarea matInput [(ngModel)]="newComment" placeholder="Add Comment" name="comment"></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="addComment(newComment,post.id)">Add Comment</button>
+        
+    </mat-card-content>
+
+</mat-card>
